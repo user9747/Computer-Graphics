@@ -1,0 +1,59 @@
+[1mdiff --git a/clipping.py b/clipping.py[m
+[1mindex e78b992..cf43dd7 100644[m
+[1m--- a/clipping.py[m
+[1m+++ b/clipping.py[m
+[36m@@ -1,6 +1,7 @@[m
+ __author__ = "Albin Antony"[m
+ __license__ = "GPL"[m
+ __version__ = "1.0.1"[m
+[32m+[m[32m__RollNo__ = "10"[m
+ #Sutherland-Hodgman Algorithm[m
+ [m
+ import turtle[m
+[36m@@ -10,7 +11,8 @@[m [mimport sys[m
+ [m
+ class Line:[m
+     def __init__(self,clr):[m
+[31m-        turtle.setup(1366, 768)[m
+[32m+[m[32m        turtle.setup(640, 480)[m
+[32m+[m[32m        turtle.hideturtle()[m
+         wn = turtle.Screen()[m
+         turtle.color(clr)[m
+         turtle.pensize(-4)[m
+[36m@@ -109,9 +111,9 @@[m [mclipper_list = [10,70,80,70,80,10,10,10][m
+ l.draw_polygon(clipper_list,"red")[m
+ poly_list = l.suthHodgClip(poly_list,clipper_list,"black")[m
+ print(poly_list)[m
+[31m-# turtle.resetscreen()[m
+[31m-# k = Line("blue")[m
+[31m-# k.draw_polygon(poly_list,"blue")[m
+[31m-turtle.hideturtle()[m
+[32m+[m[32mturtle.resetscreen()[m
+[32m+[m[32mk = Line("blue")[m
+[32m+[m[32mk.draw_polygon(poly_list,"blue")[m
+[32m+[m
+ print("Done")[m
+ time.sleep(500) [m
+\ No newline at end of file[m
+[1mdiff --git a/triangle.py b/triangle.py[m
+[1mindex 5d79e01..783c054 100755[m
+[1m--- a/triangle.py[m
+[1m+++ b/triangle.py[m
+[36m@@ -1,6 +1,8 @@[m
+ __author__ = "Albin Antony"[m
+ __license__ = "GPL"[m
+ __version__ = "1.0.1"[m
+[32m+[m[32m__RollNo__ = "10"[m
+[32m+[m[32m#Triangle Transformation[m
+ [m
+ [m
+ import turtle[m
+[36m@@ -11,7 +13,7 @@[m [mimport numpy as np[m
+ [m
+ class Line:[m
+     def __init__(self,clr):[m
+[31m-        turtle.setup(1366, 768)[m
+[32m+[m[32m        turtle.setup(640, 480)[m
+         wn = turtle.Screen()[m
+ #axis[m
+         turtle.setpos(0, 0)[m

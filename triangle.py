@@ -1,6 +1,8 @@
 __author__ = "Albin Antony"
 __license__ = "GPL"
 __version__ = "1.0.1"
+__RollNo__ = "10"
+#Triangle Transformation
 
 
 import turtle
@@ -11,7 +13,7 @@ import numpy as np
 
 class Line:
     def __init__(self,clr):
-        turtle.setup(1366, 768)
+        turtle.setup(640, 480)
         wn = turtle.Screen()
 #axis
         turtle.setpos(0, 0)

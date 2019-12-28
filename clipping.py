@@ -1,6 +1,7 @@
 __author__ = "Albin Antony"
 __license__ = "GPL"
 __version__ = "1.0.1"
+__RollNo__ = "10"
 #Sutherland-Hodgman Algorithm
 
 import turtle
@@ -10,7 +11,8 @@ import sys
 
 class Line:
     def __init__(self,clr):
-        turtle.setup(1366, 768)
+        turtle.setup(640, 480)
+        turtle.hideturtle()
         wn = turtle.Screen()
         turtle.color(clr)
         turtle.pensize(-4)
@@ -109,9 +111,9 @@ clipper_list = [10,70,80,70,80,10,10,10]
 l.draw_polygon(clipper_list,"red")
 poly_list = l.suthHodgClip(poly_list,clipper_list,"black")
 print(poly_list)
-# turtle.resetscreen()
-# k = Line("blue")
-# k.draw_polygon(poly_list,"blue")
-turtle.hideturtle()
+turtle.resetscreen()
+k = Line("blue")
+k.draw_polygon(poly_list,"blue")
+
 print("Done")
 time.sleep(500) 
